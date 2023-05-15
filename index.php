@@ -71,7 +71,7 @@
 			}));
 
 			$('#comuna').empty();
-			
+
 			$('#comuna').append($('<option>', {
 				value: '',
 				text: 'Seleccione una comuna',
@@ -110,6 +110,18 @@
 			});
 		}
 	</script>
+
+
+	<style>
+		#form {
+			border: 2px solid black;
+			/* Agregar un borde al contenedor */
+			padding: 20px;
+			/* Agregar un relleno al contenedor */
+			width: 700px;
+			/* Ancho del contenedor */
+		}
+	</style>
 
 
 </head>

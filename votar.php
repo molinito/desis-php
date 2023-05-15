@@ -5,11 +5,20 @@ require_once('bd.php');
 $nombre_apellido = mysqli_real_escape_string($conn, $_POST['nombre_apellido']);
 $alias = mysqli_real_escape_string($conn, $_POST['alias']);
 $rut = mysqli_real_escape_string($conn, $_POST['rut']);
+/* validar el RUT de acuerdo al formato de Chile, ejemplo 12.345.678-K ó 12.345.678-9 */
+if (!preg_match("/^[0-9]{1,2}\.[0-9]{3}\.[0-9]{3}-[0-9kK]{1}$/", $rut)) {
+    enviar_error_json("El RUT ingresado no es válido");
+    exit;
+}
+
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $comuna_id = mysqli_real_escape_string($conn, $_POST['comuna_id']);
 $candidato_id = mysqli_real_escape_string($conn, $_POST['candidato_id']);
 
-// 
+if (!isset($_POST['rut'])){
+    enviar_error_json('Por favor ingrese un RUT');
+    exit;
+}
 
 if (!isset($_POST['medios'])) {
     enviar_error_json('Por favor incluya al menos dos valores para el campo "Como se enteró de nosotros"');

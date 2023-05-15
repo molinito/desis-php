@@ -335,7 +335,7 @@ VALUES
 	(331,'Río Ibáñez',51),
 	(332,'Chile Chico',51),
 	(333,'Cochrane',52),
-	(334,'O\'Higgins',52),
+	(334,'O\Higgins',52),
 	(335,'Tortel',52),
 	(336,'Natales',53),
 	(337,'Torres del Paine',53),
