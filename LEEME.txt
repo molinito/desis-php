@@ -1,0 +1,14 @@
+Pasos para instalar el proyecto:
+
+1. Clona el repositorio desde GitHub.
+2. Configura la conexión a la base de datos en el archivo de configuración "bd.php".
+3. Importa la estructura de la base de datos desde el archivo SQL proporcionado.
+4. Inicia un servidor web o un entorno de desarrollo local para ejecutar el proyecto. Yo use XAMPP.
+
+Información de versión:
+
+- Versión de PHP: 8.2.0 que viene instalado con el XAMPP release 8.2.0
+- Versión de la base de datos:  MySQL Ver 8.0.32 for macos12.6 on arm64 (Homebrew)
+- Versión de XAMPP: 8.2.0
+- Versión Servidor Apache 2.4.54
+
